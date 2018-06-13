@@ -1,0 +1,13 @@
+.text
+main:	addi     $a0  	$zero	1
+     	j        L01
+L01:  	j        L02
+     	add      $a0  	$a0  	$a0
+L02:  	j        L03
+     	add      $a0  	$a0  	$a0
+     	add      $a0  	$a0  	$a0
+L03:  	j        L04
+L05:  	add      $a0  	$a0  	$a0
+     	add      $a0  	$a0  	$a0
+     	add      $a0  	$a0  	$a0
+L04:  	j        L05

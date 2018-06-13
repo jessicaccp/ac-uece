@@ -1,0 +1,11 @@
+.text
+main:   sll     $t0,    $t0,    2
+        sll     $t1,    $t1,    2
+        lw      $t3,    $t0(V02)
+        lw      $t4,    $t1(V02)
+        add     $t5,    $t3,    $t4
+        sw      $t5,    40(V01)
+
+.data
+V01:    .word   1
+V02:    .word   2

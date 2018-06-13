@@ -1,0 +1,17 @@
+.text
+main:   lw      $s0,    V01
+        lw      $s1,    V02
+        lw      $s2,    V03
+        lw      $s3,    V04
+L02:    add     $s1,    $s1,    $s0
+        add     $s2,    $s2,    $s2
+        beq     $s2,    $s3,    L01
+        bne     $s1,    $s2,    L02
+L01:    addi    $zero,  $v0,    10
+        syscall
+
+.data
+V01:    .word   1
+V02:    .word   4
+V03:    .word   16
+V04:    .word   64
